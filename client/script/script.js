@@ -10,7 +10,13 @@ async function getUsers () {
 }
 console.log(users);
 
-const createUl = document.createElement("ul");
+const createUl = `<ul> Hej </ul>`;
 
 document.body.insertAdjacentHTML("afterbegin", createUl);
+
+// Fortsätt här
+for (i = 0; i < users.length ; i++) {
+  const createIl = `<il>${users[i]}</il>`;
+  document.ul.insertAdjacentHTML("beforeend", createIl);
+}
 
