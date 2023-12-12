@@ -17,7 +17,7 @@ server
   });
 
   // Öppnar servern på porten 3000.
-  server.listen(3000, () => "Merry Christmas! The server is running on http://localhost/3000.");
+  server.listen(3000, () => "Merry Christmas! The server is running on http://localhost:3000.");
 
 // get-metod för att ta serverns ska kunna ta emot förfrågningar mot databasen.
   server.get("/users", (req, res) => {
