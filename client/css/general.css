@@ -1,0 +1,11 @@
+body
+{
+  background-color: #080329;
+}
+
+.list_item
+{
+  color: white;
+  list-style: none;
+  margin-top: 5px;
+}
