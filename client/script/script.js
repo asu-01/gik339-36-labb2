@@ -1,5 +1,4 @@
-
-const localUrl = "http://localhost:3000/users" 
+const localUrl = "http://localhost:3000/users";
 /*const users = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(getUsers());
@@ -16,11 +15,11 @@ async function getUsers () {
   return users;
 }*/
 
-function loadUrl (url){
-  return new Promise(async function ( resolve, reject ) {
+function loadUrl(url) {
+  return new Promise(async function (resolve, reject) {
     const getResolve = await fetch(url);
 
-    resolve(getResolve.json())
+    resolve(getResolve.json());
 
     /* if (!resolve) {
       reject(console.log("Hämtning av data misslyckades"));
@@ -28,11 +27,9 @@ function loadUrl (url){
   });
 }
 
-
-
-//Creates the 
-const createUl = `<ul> Hej </ul>`;
-document.body.insertAdjacentHTML("afterbegin", createUl);
+//Creates the
+// const createUl = `<ul> Hej </ul>`;
+// document.body.insertAdjacentHTML("afterbegin", createUl);
 
 const promise = loadUrl(localUrl);
 
@@ -40,19 +37,18 @@ const promise = loadUrl(localUrl);
 promise.then((users) => {
   console.log(users);
 
-  
   // Fortsätt här
-  users.forEach(user => {
-    const html = `<div class="list_item col-sm" style="border: 2px solid ${user.color}">
+  users.forEach((user) => {
+    const html = `<div class="list_item col-sm-4" style="border: 2px solid ${user.color}">
     <p class="col-sm"> Username: ${user.username}  </p>
     <p class="col-sm"> First Name: ${user.firstName} </p> 
     <p class="col-sm"> Last Name: ${user.lastName}  </p>
     </div>`;
     console.log(html);
 
-    document.getElementById("listContainer").insertAdjacentHTML('beforeend', html);
+    document.getElementById("listCard").insertAdjacentHTML("beforeend", html);
   });
-})
+});
 // ------------------------- //
 
 /*const createUl = `<ul> Hej </ul>`;
@@ -70,4 +66,3 @@ const setColor = document.getElementsByTagName("il");
 for (element in setColor) {
   element.style.backgroundColor == users.color;
 }*/
-
