@@ -39,10 +39,10 @@ promise.then((users) => {
 
   // Fortsätt här
   users.forEach((user) => {
-    const html = `<div class="list_item col-sm-4" style="border: 2px solid ${user.color}">
-    <p class="col-sm"> Username: ${user.username}  </p>
-    <p class="col-sm"> First Name: ${user.firstName} </p> 
-    <p class="col-sm"> Last Name: ${user.lastName}  </p>
+    const html = `<div class="p-2 col-lg-4 m-3 list_item" style="border: 4px solid ${user.color}">
+    <div class="p-2 m-2 list_item__descriptor"> <h3>Username:</h3> ${user.username}  </div>
+    <div class="p-2 m-2 list_item__descriptor"> <h3>First Name:</h3> ${user.firstName} </div> 
+    <div class="p-2 m-2 list_item__descriptor"> <h3>Last Name:</h3> ${user.lastName}  </div>
     </div>`;
     console.log(html);
 

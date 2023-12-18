@@ -5,7 +5,27 @@ body
 
 .list_item
 {
-  color: white;
+  color: rgb(21, 21, 21);
   list-style: none;
   margin-top: 5px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+}
+
+.list_item__descriptor
+{
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 10px;
+  background-color: rgba(226, 226, 226, 0.5);
+}
+.list_item__descriptor h3
+{
+  margin-bottom: unset;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.grid
+{
+  display: grid;
 }
