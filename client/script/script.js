@@ -1,23 +1,5 @@
 const localUrl = "http://localhost:3000/users";
 
-// ------------------------------------ TA BORT?
-/*const users = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(getUsers());
-  }, 100);
-});*/
-
-/*const users = getUsers();
-
-// Skapar uppkoppling mot server och översätter response-objektet till en array.
-async function getUsers () {
-  const response = await fetch(localUrl);
-  const users = await response.json();
-  console.log(users);
-  return users;
-}*/
-
-// -------------------------------------
 
 // Skapar uppkoppling mot server och översätter response-objektet till en array.
 function loadUrl(url) {
@@ -26,7 +8,6 @@ function loadUrl(url) {
 
     resolve(getResolve.json());
 
-    // Kontrollera om denna fungerar!!!!! Lägga till err.message?
     if (!resolve) {
       reject(console.log("Hämtning av data misslyckades"));
     }
@@ -45,7 +26,6 @@ promise.then((users) => {
     <div class="p-2 m-2 list_item__descriptor"> <h3>First Name:</h3> ${user.firstName} </div> 
     <div class="p-2 m-2 list_item__descriptor"> <h3>Last Name:</h3> ${user.lastName}  </div>
     </div>`;
-    console.log(html);
 
     document.getElementById("listCard").insertAdjacentHTML("beforeend", html);
   });
